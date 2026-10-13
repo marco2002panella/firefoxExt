@@ -1,10 +1,12 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "US Keyboard Sender",
-  "version": "1.0",
-  "description": "Invia a qualsiasi pagina web i tasti come se fossero premuti su una tastiera con layout US.",
+  "version": "2.1",
+  "description": "Converte la tastiera IT in tasti con layout US su qualsiasi pagina web, con pannello sempre visibile.",
   "browser_specific_settings": { "gecko": { "id": "us-keyboard-sender@marco2002panella" } },
-  "action": { "default_popup": "popup.html", "default_title": "US Keyboard Sender" },
+  "permissions": ["<all_urls>", "tabs", "webNavigation", "clipboardRead"],
+  "background": { "scripts": ["background.js"] },
+  "browser_action": { "default_title": "US Keyboard Sender (mostra/nascondi pannello)" },
   "content_scripts": [
     { "matches": ["<all_urls>"], "js": ["content.js"], "all_frames": true }
   ]
