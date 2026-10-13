@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "US Keyboard Sender",
+  "version": "1.0",
+  "description": "Invia a qualsiasi pagina web i tasti come se fossero premuti su una tastiera con layout US.",
+  "browser_specific_settings": { "gecko": { "id": "us-keyboard-sender@marco2002panella" } },
+  "action": { "default_popup": "popup.html", "default_title": "US Keyboard Sender" },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["content.js"], "all_frames": true }
+  ]
+}
